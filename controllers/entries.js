@@ -27,11 +27,12 @@ module.exports = {
 		}
 	},
 	createEntry: async (req, res) => {
+		console.log(req);
 		try {
 			await Entry.create({
 				summary: req.body.summary,
 				date: req.body.date,
-				userId: req.user.id,
+				userId: req.user.id, // <-- where is it going to get this from
 				cause: req.body.cause,
 				action: req.body.action,
 				result: req.body.result,

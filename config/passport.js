@@ -1,6 +1,6 @@
 const LocalStrategy = require("passport-local").Strategy;
+const passport = require("passport");
 const User = require("../models/User");
-require("./config/passport")(passport);
 
 module.exports = function (passport) {
 	passport.use(
@@ -38,5 +38,3 @@ module.exports = function (passport) {
 		User.findById(id, (err, user) => done(err, user));
 	});
 };
-
-export default passport;
