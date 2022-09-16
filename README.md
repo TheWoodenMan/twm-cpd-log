@@ -27,8 +27,10 @@ Having previously only used older versions of mongoose, I wanted to use the late
 Bootstrap was a really nice lightweight framework to use, but there is a learning curve.  Taking it from "working" to "ok" and "ok" to good was just a question of how much time I wanted to spend going over the documentation.  That's all good and I could probably spend a bit more time making it better - but getting authenticaiton set up was more important. - I will go back and make it look nicer when I get more time. Generally I prioritise functionality over form.
 
 ## Examples:
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at these other examples that I have in my own portfolio:
 
 Tab-Safe: https://github.com/HoldUpFjord/Link-Manager
+This was the first app where I helped implement authentication, the work we did there forms the foundation for password/logins for this app.
 
 Behavioural Recruitment RESTful API: https://github.com/TheWoodenMan/behavioural-recruitment
+This RESTful API was my most detailed exploration of CRUD functions and my first real implementation of mongoose, both of which feature heavily in this app
