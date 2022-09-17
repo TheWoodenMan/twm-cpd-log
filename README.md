@@ -8,7 +8,9 @@ Link to project: https://twm-cpd-log.thewoodenman.repl.co
 
 
 ## How It's Made:
-Tech used: HTML, CSS, JavaScript, Bootstrap, EJS, node.js, express, mongoDB
+Tech used: HTML, CSS, JavaScript, Bootstrap, EJS, node.js, express, mongoDB, mongoose, 
+
+Middleware: passport.js, bcrypt, validator, express-session, body-parser, flash, morgan, 
 
 I built this as a simple CRUD app that grabs your data from a form sent to the back-end then uploads it to mongodb.  I used a combination of EJS and Bootstrap for the front-end which worked extremely well, bootstrap is lightweight and totally compatible, it was possible to make a simple, clean UI quickly and effectively.  
 
