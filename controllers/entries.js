@@ -1,3 +1,4 @@
+const { json } = require("express");
 const Entry = require("../models/Entry");
 
 module.exports = {
@@ -7,7 +8,6 @@ module.exports = {
 			const entryItems = await Entry.find({ userId: req.user.id }).sort({
 				"date": -1,
 			});
-
 			// const itemsLeft = await Entry.countDocuments({
 			// 	userId: req.user.id,
 			// 	completed: false,
@@ -45,11 +45,9 @@ module.exports = {
 		}
 	},
 	deleteEntry: async (req, res) => {
-		console.log(req.body.entryFromJS);
 		try {
-			await Entry.findOneAndDelete({ _id: req.body.entryFromJS });
-			console.log("Deleted Entry");
-			res.json("Deleted It");
+			await Entry.findOneAndDelete({ _id: req.body.entryIdFromJS });
+			res.json({ "report": "Deleted It" });
 		} catch (err) {
 			console.log(err);
 		}
