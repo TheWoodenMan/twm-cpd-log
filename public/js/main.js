@@ -5,13 +5,14 @@ Array.from(deleteBtn).forEach((el) => {
 });
 
 async function deleteEntry() {
-	const entryText = this.parentNode.childNodes[1].innerText;
+	const entryId = this.parentNode.childNodes[1].id;
+	console.log(this.parentNode.childNodes[1].id);
 	try {
 		const response = await fetch("deleteEntry", {
 			method: "delete",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({
-				"entryFromJS": entryText,
+				"entryIdFromJS": entryId,
 			}),
 		});
 

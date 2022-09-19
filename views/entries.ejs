@@ -58,6 +58,9 @@
 					</li>
 				</ul>
 			</div>
+			<div>
+				<a href="/logout" class="nav-link"><%= user ? "Logout" | ""%></a>
+			</div>
 		</nav>
 	</header>
 	<body>
@@ -161,7 +164,7 @@
 							aria-expanded="false"
 							aria-controls="collapse<%=i%>"
 						>
-							<span><%= entries[i].summary %></span>
+							<span id="<%=entries[i]._id%>"><%= entries[i].summary %></span>
 							<span>&nbsp;<%= entries[i].date %>&nbsp;</span>
 							<span class="fas fa-trash"></span>
 						</button>
