@@ -3,7 +3,6 @@ const Entry = require("../models/Entry");
 
 module.exports = {
 	getEntries: async (req, res) => {
-		console.log(req.user);
 		try {
 			const entryItems = await Entry.find({ userId: req.user.id }).sort({
 				"date": -1,
@@ -32,7 +31,7 @@ module.exports = {
 			await Entry.create({
 				summary: req.body.summary,
 				date: req.body.date,
-				userId: req.user.id, // <-- where is it going to get this from
+				userId: req.user.id,
 				cause: req.body.cause,
 				action: req.body.action,
 				result: req.body.result,

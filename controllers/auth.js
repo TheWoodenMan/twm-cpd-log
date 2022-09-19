@@ -47,12 +47,8 @@ exports.postLogin = (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
-	req.logout((err) => {
-		if (err) {
-			console.log("There has been an error.", err);
-		} else {
-			console.log("User has logged out.");
-		}
+	req.logout(() => {
+		console.log("User has logged out.");
 	});
 	res.redirect("/");
 };
