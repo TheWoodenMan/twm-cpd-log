@@ -34,7 +34,7 @@ connectDB();
 
 app.use(
 	session({
-		secret: "cpd one two three",
+		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: false,
 		store: MongoStore.create({
