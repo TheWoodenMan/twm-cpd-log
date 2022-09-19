@@ -28,6 +28,8 @@ Having previously only used older versions of mongoose, I wanted to use the late
 ## Lessons Learned:
 Bootstrap was a really nice lightweight framework to use, but there is a learning curve.  Taking it from "working" to "ok" and "ok" to good was just a question of how much time I wanted to spend going over the documentation.  That's all good and I could probably spend a bit more time making it better - but getting authenticaiton set up was more important. - I will go back and make it look nicer when I get more time. Generally I prioritise functionality over form.
 
+I deep dived quite a bit on express-session for this one.  After installing a logout button that only appears if you're logged in and on the entries page, It correctly logged you out but crashed the server each time instead of redirecting! The problem was in the syntax of the session termination request.  `req.session.destroy()` and `delete req.user` are both cited as ways to end the session.  But in combination with passport.js they kept throwing errors like req.session is not a function. I learned that versioning can be really important as successive versions can add/remove features and functionalities, sometimes completely changing their syntax in the process. Removing the redundant syntax fixed the problem.
+
 ## Examples:
 Take a look at these other examples that I have in my own portfolio:
 
