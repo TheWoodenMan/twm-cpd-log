@@ -62,7 +62,15 @@
 				</ul>
 			</div>
 			<div>
-				<a href="/logout" class="nav-link"> <%= user ? 'Logout' : '' %> </a>
+				<a
+					form
+					method="GET"
+					href="/logout"
+					action="/logout?_method=POST"
+					class="nav-link"
+				>
+					<%= user ? 'Logout' : '' %>
+				</a>
 			</div>
 		</nav>
 	</header>
