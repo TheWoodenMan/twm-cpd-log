@@ -1,4 +1,3 @@
-const { json } = require("express");
 const Entry = require("../models/Entry");
 
 module.exports = {
@@ -26,7 +25,7 @@ module.exports = {
 		}
 	},
 	createEntry: async (req, res) => {
-		console.log(req);
+		console.log(req.body);
 		try {
 			await Entry.create({
 				summary: req.body.summary,
@@ -37,7 +36,7 @@ module.exports = {
 				result: req.body.result,
 				learned: req.body.learned,
 			});
-			console.log("Entry has been added!");
+			console.log(`Entry ${req.body.summary} has been added!`);
 			res.redirect("/entries");
 		} catch (err) {
 			console.log(err);
@@ -45,10 +44,14 @@ module.exports = {
 	},
 	deleteEntry: async (req, res) => {
 		try {
-			await Entry.findOneAndDelete({ _id: req.body.entryIdFromJS });
-			res.json({ "report": "Deleted It" });
+			// Find post by id
+			let entry = await Entry.findById({ _id: req.params.id });
+			// Delete post from db
+			await Entry.remove({ _id: req.params.id });
+			console.log("Deleted Entry");
+			res.redirect("/entries");
 		} catch (err) {
-			console.log(err);
+			res.redirect("/entries");
 		}
 	},
 };

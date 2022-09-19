@@ -118,11 +118,11 @@
 				</p>
 			</div>
 			<div class="container row offset-lg-1">
-				<h2 class="offset-lg-2">Submit a Log Entry</h2>
+				<h2 class="offset-lg-1">Submit a Log Entry</h2>
 				<form
 					action="/entries/createEntry"
 					method="POST"
-					class="col-lg-9 offset-lg-2 gy-2 container"
+					class="col-lg-11 offset-lg-1 gy-2 container"
 				>
 					<input
 						class="col-lg-8 py-2"
@@ -165,8 +165,8 @@
 			<!-- takes the provided entries data and loops over it.-->
 			<div class="accordion" id="accordionEntry">
 				<% for (let i=0; i < entries.length; i++) { %>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="heading<%=i%>">
+				<div class="accordion-item col-lg-9">
+					<div class="accordion-header btn-group col-lg-12" id="heading<%=i%>">
 						<button
 							class="accordion-button collapsed"
 							type="button"
@@ -177,9 +177,17 @@
 						>
 							<span id="<%=entries[i]._id%>"><%= entries[i].summary %></span>
 							<span>&nbsp;<%= entries[i].date %>&nbsp;</span>
-							<span class="fas fa-trash"></span>
 						</button>
-					</h2>
+
+						<form
+							action="/entries/deleteEntry/<%= entries[i]._id%>?_method=DELETE"
+							method="POST"
+						>
+							<button class="btn btn-danger" aria-hidden="true" type="submit">
+								Delete
+							</button>
+						</form>
+					</div>
 
 					<div
 						id="collapse<%=i%>"
@@ -198,6 +206,7 @@
 						</div>
 					</div>
 				</div>
+
 				<% } %>
 			</div>
 		</section>
