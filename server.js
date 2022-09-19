@@ -52,58 +52,8 @@ app.use(flash());
 
 app.use("/", mainRoutes);
 app.use("/entries", entryRoutes);
-
-// // This express route handles the refresh to the default login page.
-// app.get("/", async (request, response) => {
-// 	// This render response sends the now modified ejs to the user
-// 	response.render("login.ejs", { entries: entries });
-// });
-
-// // this express route handles the authorised access to the log entries
-// app.get("/entries", async (request, response) => {
-// 	// This mongodb search returns all "entries" entries
-// 	const entries = await db
-// 		.collection("entries")
-// 		.find()
-// 		.sort({ "date": -1 })
-// 		.toArray();
-
-// 	// This render response sends the now modified ejs to the user
-// 	response.render("entries.ejs", { entries: entries });
-// });
-
-// // This express router creates new log entries from the form
-// app.post("/addEntry", (req, res) => {
-// 	// create a new document in the collection "entries"
-// 	db.collection("entries")
-// 		.insertOne({
-// 			summary: req.body.summary,
-// 			date: req.body.date,
-// 			cause: req.body.cause,
-// 			action: req.body.action,
-// 			result: req.body.result,
-// 			learned: req.body.learned,
-// 		})
-// 		.then((result) => {
-// 			console.log(`Log entry ${result.insertedId} added`);
-// 			console.log("You have updated your journal.");
-// 			res.redirect("/");
-// 		})
-// 		.catch((err) => {
-// 			console.log(err);
-// 		});
-// });
-
-// app.delete("/deleteEntry", (req, res) => {
-// 	db.collection("entries")
-// 		.deleteOne({ summary: req.body.entryFromJS })
-// 		.then((result) => {
-// 			console.log(result);
-// 			console.log("Log Entry Deleted");
-// 			res.json("Log Entry Deleted");
-// 		})
-// 		.catch((err) => console.error(err));
-// });
+app.use("/tos", mainRoutes);
+app.use("/privacy", mainRoutes);
 
 app.listen(process.env.PORT || PORT, () => {
 	console.log(`Server running on port ${PORT}`);
