@@ -5,7 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CPD Log</title>
-		<link rel="shortcut icon" type="image/x-icon" href=/teapot_1fad6_16x16.png"
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="/teapot_1fad6_16x16.png"
 		/>
 		<link
 			rel="stylesheet"
@@ -33,7 +36,11 @@
 				aria-expanded="false"
 				aria-label="Toggle navigation"
 			>
-				<span class="navbar-toggler-icon"></span>
+				<span
+					class="navbar-toggler-icon"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+				></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
@@ -57,24 +64,23 @@
 					<li class="nav-item">
 						<a class="nav-link" href="privacy">Privacy</a>
 					</li>
+					<li>
+						<form
+							method="GET"
+							href="/logout"
+							action="/logout?_method=POST"
+							class="nav-link ml-auto"
+						>
+							<a> <%= user ? 'Logout' : '' %> </a>
+						</form>
+					</li>
 				</ul>
-			</div>
-			<div>
-				<a
-					form
-					method="GET"
-					href="/logout"
-					action="/logout?_method=POST"
-					class="nav-link text-secondary"
-				>
-					<%= !user ? '' : 'Logout' %>
-				</a>
 			</div>
 		</nav>
 	</header>
 	<body>
 		<section>
-			<div class="row container px-4 gy-2 offset-lg-2">
+			<div class="row container px-4 gy-2 offset-md-1">
 				<h1 class="text-primary">CPD LOG</h1>
 				<p class="col-lg-2">
 					<a
@@ -96,8 +102,8 @@
 							data-toggle="tooltip"
 							title="(Continuing Professional Development)"
 							>CPD Log</span
-						></a
-					>
+						>
+					</a>
 					helps a leader to identify and reflect on learning opportunities in
 					their day to day work.
 				</p>
@@ -115,56 +121,57 @@
 					better.
 				</p>
 			</div>
-			<div class="container row offset-lg-1">
-				<h2 class="offset-lg-1 text-primary">Submit a Log Entry</h2>
+			<div class="container row offset-md-1">
+				<h2 class="offset-lg-1 py-1 text-primary">Submit a Log Entry</h2>
+				<br />
 				<form
 					action="/entries/createEntry"
 					method="POST"
-					class="col-lg-11 offset-lg-1 gy-2 container"
+					class="col-md-12 offset-lg-1 gy-2 container"
 				>
 					<input
-						class="col-lg-8 py-2"
+						class="col-md-8 py-2"
 						type="text"
 						placeholder="Short title summary"
 						name="summary"
 					/>
-					<input class="col-lg-3 py-2" type="date" name="date" />
+					<input class="col-md-3 py-2" type="date" name="date" />
 					<input
-						class="col-lg-11 py-2"
+						class="col-11 py-2"
 						type="text"
 						placeholder="What happened?"
 						name="cause"
 					/>
 					<input
-						class="col-lg-11 py-2"
+						class="col-11 py-2"
 						type="text"
 						placeholder="What did you do?"
 						name="action"
 					/>
 					<input
-						class="col-lg-11 py-2"
+						class="col-11 py-2"
 						type="text"
 						placeholder="How did it go?"
 						name="result"
 					/>
 					<input
-						class="col-lg-11 py-2"
+						class="col-11 py-2"
 						type="text"
 						placeholder="What did you learn?"
 						name="learned"
 					/>
-					<input class="btn btn-primary col-lg-11 py-2" type="submit" />
+					<input class="btn btn-primary col-11 py-2" type="submit" />
 				</form>
 			</div>
 		</section>
 		<br />
-		<section class="row container px-5 gy-2 offset-lg-2">
+		<section class="row container px-5 gy-2 offset-md-1">
 			<h2 class="text-primary">Log Entries</h2>
 			<!-- takes the provided entries data and loops over it.-->
 			<div class="accordion" id="accordionEntry">
 				<% for (let i=0; i < entries.length; i++) { %>
-				<div class="accordion-item col-lg-9">
-					<div class="accordion-header btn-group col-lg-12" id="heading<%=i%>">
+				<div class="accordion-item col-md-11">
+					<div class="accordion-header btn-group col-md-12" id="heading<%=i%>">
 						<button
 							class="accordion-button collapsed"
 							type="button"
@@ -181,8 +188,9 @@
 							action="/entries/deleteEntry/<%= entries[i]._id%>?_method=DELETE"
 							method="POST"
 						>
-							<button class="btn btn-danger" type="submit">
-								Delete <i class="fa-solid fa-trash"></i>
+							<button class="btn btn-danger h-100 w-auto" type="submit">
+								Delete
+								<i class="fa-solid fa-trash"></i>
 							</button>
 						</form>
 					</div>
