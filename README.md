@@ -3,7 +3,8 @@
 CPD Log
 I built this app as a management tool to help myself (or other leaders) to track their continuous professional development.  Previous logs I had maintained were fully manual in either gsheets or written in markdown - I wanted something database related, powerful but simple in presentation that I could adapt for quick access and day to day use.
 
-Link to project: https://cpd-log.onrender.com/![image](https://user-images.githubusercontent.com/85075266/191354067-01f86c67-1749-4078-a7f2-b2bf0f57ca90.png)
+Link to project: https://cpd-log.onrender.com/
+![image](https://user-images.githubusercontent.com/85075266/191354067-01f86c67-1749-4078-a7f2-b2bf0f57ca90.png)
 
 
 ## How It's Made:
