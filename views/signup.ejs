@@ -106,7 +106,7 @@
 				<div class="alert alert-danger"><%= el.msg %></div>
 				<% }) %> <% } %>
 				<div class="row container px-5 gy-2 offset-md-1">
-					<h2 class="text-primary" >Sign Up</h2>
+					<h2 class="text-primary">Sign Up</h2>
 					<form action="/signup" method="POST">
 						<div class="form-group py-2">
 							<label for="userName">Username</label>
@@ -116,7 +116,7 @@
 								name="userName"
 								placeholder="Username"
 							/>
-							<small class="form-text class="form-control" text-muted">
+							<small class="form-text" class="form-control text-muted">
 								What you'd like to be known as.
 							</small>
 						</div>
@@ -135,7 +135,13 @@
 						</div>
 						<div class="form-group py-2">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+							<input
+								type="password"
+								class="form-control"
+								id="password"
+								name="password"
+								placeholder="Password"
+							/>
 							<small class="form-text text-muted">
 								Passwords must be 8 characters
 							</small>
@@ -154,21 +160,34 @@
 							</small>
 						</div>
 						<div class="form-check py-2">
-							<input type="checkbox" class="form-check-input" id="tosAgree"
-							onchange="document.getElementById('button').disabled = !this.checked;" name='submit' 
-id='visto'
- />
+							<input
+								type="checkbox"
+								class="form-check-input"
+								id="tosAgree"
+								onchange="document.getElementById('button').disabled = !this.checked;"
+								name="submit"
+								id="visto"
+							/>
 							<label class="form-check-label" for="tosAgree">
 								I confirm I agree to the
 								<a href="tos" target="_blank">
-									<span data-toggle="tooltip" title="(Chartered Managers Institute)">
+									<span
+										data-toggle="tooltip"
+										title="(Chartered Managers Institute)"
+									>
 										TOS
-										</span>
-										</a>
-								</label>
+									</span>
+								</a>
+							</label>
 						</div>
-						<input type="submit" id="button" class="btn btn-block col-12 btn-primary" type="submit" value="Submit" disabled>
-
+						<input
+							type="submit"
+							id="button"
+							class="btn btn-block col-12 btn-primary"
+							type="submit"
+							value="Submit"
+							disabled
+						/>
 					</form>
 				</div>
 			</main>
