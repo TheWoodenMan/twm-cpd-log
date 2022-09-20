@@ -65,14 +65,14 @@
 						<a class="nav-link" href="privacy">Privacy</a>
 					</li>
 					<li>
-						<form
+						<a   form
 							method="GET"
 							href="/logout"
 							action="/logout?_method=POST"
 							class="nav-link ml-auto"
 						>
-							<a> <%= user ? 'Logout' : '' %> </a>
-						</form>
+						    <%= user ? 'Logout' : '' %> </a>
+						</a>
 					</li>
 				</ul>
 			</div>
