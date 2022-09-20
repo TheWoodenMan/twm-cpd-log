@@ -115,6 +115,7 @@
 								class="form-control"
 								name="userName"
 								placeholder="Username"
+								required
 							/>
 							<small class="form-text" class="form-control text-muted">
 								What you'd like to be known as.
@@ -128,10 +129,28 @@
 								id="email"
 								name="email"
 								placeholder="Email"
+								required
 							/>
 							<small class="form-text text-muted">
 								For login use only, we don't share it.
 							</small>
+						</div>
+						<div class="form-check py-2">
+							<input
+								type="checkbox"
+								class="form-check-input"
+								id="tosAgree"
+								onchange="document.getElementById('button').disabled = !this.checked;"
+								name="submit"
+							/>
+							<label class="form-check-label" for="tosAgree">
+								I confirm I agree to the
+								<a href="tos" target="_blank">
+									<span data-toggle="tooltip" title="(Terms of Service)">
+										TOS
+									</span>
+								</a>
+							</label>
 						</div>
 						<div class="form-group py-2">
 							<label for="password">Password</label>
@@ -141,6 +160,7 @@
 								id="password"
 								name="password"
 								placeholder="Password"
+								required
 							/>
 							<small class="form-text text-muted">
 								Passwords must be 8 characters
@@ -154,37 +174,17 @@
 								id="confirmPassword"
 								class="form-control"
 								placeholder="Confirm Password"
+								required
 							/>
 							<small class="form-text text-muted">
 								Create a unique password for each site, don't reuse :)
 							</small>
 						</div>
-						<div class="form-check py-2">
-							<input
-								type="checkbox"
-								class="form-check-input"
-								id="tosAgree"
-								onchange="document.getElementById('button').disabled = !this.checked;"
-								name="submit"
-								id="visto"
-							/>
-							<label class="form-check-label" for="tosAgree">
-								I confirm I agree to the
-								<a href="tos" target="_blank">
-									<span
-										data-toggle="tooltip"
-										title="(Chartered Managers Institute)"
-									>
-										TOS
-									</span>
-								</a>
-							</label>
-						</div>
+
 						<input
 							type="submit"
 							id="button"
 							class="btn btn-block col-12 btn-primary"
-							type="submit"
 							value="Submit"
 							disabled
 						/>
