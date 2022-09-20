@@ -3,8 +3,8 @@
 CPD Log
 I built this app as a management tool to help myself (or other leaders) to track their continuous professional development.  Previous logs I had maintained were fully manual in either gsheets or written in markdown - I wanted something database related, powerful but simple in presentation that I could adapt for quick access and day to day use.
 
-Link to project: https://twm-cpd-log.thewoodenman.repl.co
-![image](https://user-images.githubusercontent.com/85075266/190810840-640e46d1-4a72-4f7c-bc36-9d1f551d424c.png)
+Link to project: https://cpd-log.onrender.com/
+![image](https://user-images.githubusercontent.com/85075266/191130776-06ee9e29-eb86-48ca-8fe1-d86a3163d57e.png)
 
 
 ## How It's Made:
@@ -27,6 +27,8 @@ Having previously only used older versions of mongoose, I wanted to use the late
 
 ## Lessons Learned:
 Bootstrap was a really nice lightweight framework to use, but there is a learning curve.  Taking it from "working" to "ok" and "ok" to good was just a question of how much time I wanted to spend going over the documentation.  That's all good and I could probably spend a bit more time making it better - but getting authenticaiton set up was more important. - I will go back and make it look nicer when I get more time. Generally I prioritise functionality over form.
+
+I deep dived quite a bit on express-session for this one.  After installing a logout button that only appears if you're logged in and on the entries page, It correctly logged you out but crashed the server each time instead of redirecting! The problem was in the syntax of the session termination request.  `req.session.destroy()` and `delete req.user` are both cited as ways to end the session.  But in combination with passport.js they kept throwing errors like req.session is not a function. I learned that versioning can be really important as successive versions can add/remove features and functionalities, sometimes completely changing their syntax in the process. Removing the redundant syntax fixed the problem.
 
 ## Examples:
 Take a look at these other examples that I have in my own portfolio:
