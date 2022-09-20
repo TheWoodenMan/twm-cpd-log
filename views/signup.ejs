@@ -59,8 +59,8 @@
 	</header>
 	<body>
 		<section>
-			<div class="row container px-4 gy-2 offset-lg-2">
-				<h1>CPD LOG</h1>
+			<div class="row container px-4 gy-2 offset-md-1">
+				<h1 class="text-primary">CPD LOG</h1>
 				<p class="col-lg-2">
 					<a
 						href="https://www.managers.org.uk/membership/chartered-manager/"
@@ -105,22 +105,69 @@
 				%>
 				<div class="alert alert-danger"><%= el.msg %></div>
 				<% }) %> <% } %>
-				<div>
-					<h2>Sign In</h2>
+				<div class="row container px-5 gy-2 offset-md-1">
+					<h2 class="text-primary" >Sign Up</h2>
 					<form action="/signup" method="POST">
-						<span>Username:</span>
-						<input type="text" name="userName" placeholder="Username" />
-						<span>Email:</span>
-						<input type="email" name="email" placeholder="Email" />
-						<span>Password:</span>
-						<input type="password" name="password" placeholder="Password" />
-						<span>Confirm Password:</span>
-						<input
-							type="password"
-							name="confirmPassword"
-							placeholder="Confirm Password"
-						/>
-						<input id="button" type="submit" />
+						<div class="form-group py-2">
+							<label for="userName">Username</label>
+							<input
+								type="text"
+								class="form-control"
+								name="userName"
+								placeholder="Username"
+							/>
+							<small class="form-text class="form-control" text-muted">
+								What you'd like to be known as.
+							</small>
+						</div>
+						<div class="form-group py-2">
+							<label for="email">Email</label>
+							<input
+								type="email"
+								class="form-control"
+								id="email"
+								name="email"
+								placeholder="Email"
+							/>
+							<small class="form-text text-muted">
+								For login use only, we don't share it.
+							</small>
+						</div>
+						<div class="form-group py-2">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+							<small class="form-text text-muted">
+								Passwords must be 8 characters
+							</small>
+						</div>
+						<div class="form-group">
+							<label for="confirmPassword">Confirm</label>
+							<input
+								type="password"
+								name="confirmPassword"
+								id="confirmPassword"
+								class="form-control"
+								placeholder="Confirm Password"
+							/>
+							<small class="form-text text-muted">
+								Create a unique password for each site, don't reuse :)
+							</small>
+						</div>
+						<div class="form-check py-2">
+							<input type="checkbox" class="form-check-input" id="tosAgree"
+							onchange="document.getElementById('button').disabled = !this.checked;" name='visto' 
+id='visto'
+ />
+							<label class="form-check-label" for="tosAgree">
+								I confirm I agree to the
+								<a href="tos" target="_blank">
+									<span data-toggle="tooltip" title="(Chartered Managers Institute)">
+										TOS
+										</span>
+										</a>
+								</label>
+						</div>
+						<input id="button" type="submit" disabled />
 					</form>
 				</div>
 			</main>
