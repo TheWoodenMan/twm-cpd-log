@@ -121,46 +121,46 @@
 					better.
 				</p>
 			</div>
-			<div class="container row offset-md-1">
-				<h2 class="offset-lg-1 py-1 text-primary">Submit a Log Entry</h2>
+			<div class="container row offset-1 col-10">
+				<h2 class="py-1 px-1 text-primary">Submit a Log Entry</h2>
 				<br />
 				<form
 					action="/entries/createEntry"
 					method="POST"
-					class="col-md-12 offset-lg-1 gy-2 container"
+					class="col-md-12 gy-2 container"
 				>
 					<input
-						class="col-md-8 py-2"
+						class="col-md-8 form-control"
 						type="text"
 						placeholder="Short title summary"
 						name="summary"
 					/>
-					<input class="col-4 py-2" type="date" name="date" />
+					<input class="col-4 col-md-3  form-control" type="date" name="date" />
 					<input
-						class="col-11 py-2"
+						class="col-11 col-md-9 form-control"
 						type="text"
 						placeholder="What happened?"
 						name="cause"
 					/>
 					<input
-						class="col-11 py-2"
+						class="col-11 col-md-9  form-control"
 						type="text"
 						placeholder="What did you do?"
 						name="action"
 					/>
 					<input
-						class="col-11 py-2"
+						class="col-11 col-md-8  form-control"
 						type="text"
 						placeholder="How did it go?"
 						name="result"
 					/>
 					<input
-						class="col-11 py-2"
+						class="col-11 col-md-9 form-control"
 						type="text"
 						placeholder="What did you learn?"
 						name="learned"
 					/>
-					<input class="btn btn-primary col-11 py-2" type="submit" />
+					<input class="btn btn-primary col-11 col-md-9 form-control" type="submit" />
 				</form>
 			</div>
 		</section>
