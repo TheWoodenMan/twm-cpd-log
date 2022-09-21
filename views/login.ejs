@@ -41,16 +41,28 @@
 						>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="signup">Sign Up</a>
+						<a class="nav-link" href="signup"><%= !user ? 'Sign Up' : '' %></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="login">Login</a>
+						<a class="nav-link" href="login"
+							><%= !user ? 'Login' : 'Entries' %>
+						</a>
 					</li>
                     <li class="nav-item">
 						<a class="nav-link" href="tos">Terms of Service</a>
 					</li>
                     <li class="nav-item">
 						<a class="nav-link" href="privacy">Privacy</a>
+					</li>
+					<li>
+						<a   form
+							method="GET"
+							href="/logout"
+							action="/logout?_method=POST"
+							class="nav-link ml-auto"
+						>
+						    <%= user ? 'Logout' : '' %> </a>
+						</a>
 					</li>
 				</ul>
 			</div>
