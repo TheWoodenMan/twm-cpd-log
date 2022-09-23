@@ -22,3 +22,35 @@ img {
 /******************************************
   /* ADDITIONAL STYLES
   /*******************************************/
+
+html > header > nav {
+	font-family: "montserrat", Arial, sans-serif !important;
+	background-color: #e0eaef;
+}
+
+#title-image {
+	height: 50vh;
+}
+
+header,
+#home,
+nav.navbar {
+	background-color: #e0eaef;
+}
+
+#home > h1,
+#home > p {
+	color: #03023e;
+}
+
+#cpd-background-image {
+	background-image: url(/images/leaders_meeting.avif);
+	object-fit: cover;
+	width: 100%;
+	opacity: 60%;
+	height: 55vh;
+	color: #03023e;
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+}
