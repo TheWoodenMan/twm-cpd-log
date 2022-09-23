@@ -121,6 +121,7 @@
 					better.
 				</p>
 			</div>
+			
 			<div class="container row offset-1 col-10">
 				<h2 class="py-1 px-1 text-primary">Submit a Log Entry</h2>
 				<br />
@@ -170,6 +171,24 @@
 			</div>
 		</section>
 		<br />
+		<div class="container row offset-1 col-10">
+			<h2 class="py-1 px-1 text-primary">Search by Dates</h2>
+			<br />
+			<form
+				action="/entries/searchDates"
+				method="POST"
+				class="col-md-12 gy-2 container"
+			>
+				
+			<label for="startDate">Start Date:</label>
+				<input class="col-3 col-md-3  form-control" type="date" name="startDate" id="startDate" required/>
+			<label for="endDate">End Date:</label>
+				<input class="col-3 col-md-3  form-control" type="date" name="endDate" id="endDate" required/>
+				
+				<input class="btn btn-primary col-11 col-md-9 form-control" type="submit" />
+			</form>
+		</div>
+		<br />
 		<section class="row container px-5 gy-2 offset-md-1">
 			<h2 class="text-primary">Log Entries</h2>
 			<!-- takes the provided entries data and loops over it.-->
@@ -185,8 +204,8 @@
 							aria-expanded="false"
 							aria-controls="collapse<%=i%>"
 						>
-							<span id="<%=entries[i]._id%>"><%= entries[i].summary %></span>
-							<span>&nbsp;<%= entries[i].date %>&nbsp;</span>
+							<span id="<%=entries[i]._id%>"><%=  entries[i].date.toLocaleDateString() %></span>
+							<span>&nbsp;<%= entries[i].summary %>&nbsp;</span>
 						</button>
 
 						<form
@@ -221,7 +240,7 @@
 				<% } %>
 			</div>
 		</section>
-		<script src="js/main.js"></script>
+		<script src="/js/main.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

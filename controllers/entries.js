@@ -6,6 +6,27 @@ module.exports = {
 			const entryItems = await Entry.find({ userId: req.user.id }).sort({
 				"date": -1,
 			});
+			res.render("entries.ejs", {
+				entries: entryItems,
+				user: req.user,
+			});
+		} catch (err) {
+			console.log(err);
+		}
+	},
+	searchDates: async (req, res) => {
+		try {
+			console.log(req.body.startDate);
+			console.log(req.body.endDate);
+			const entryItems = await Entry.find({
+				userId: req.user.id,
+				date: {
+					$gte: new Date(req.body.startDate),
+					$lt: new Date(req.body.endDate),
+				},
+			}).sort({
+				"date": -1,
+			});
 			// const itemsLeft = await Entry.countDocuments({
 			// 	userId: req.user.id,
 			// 	completed: false,
@@ -24,12 +45,13 @@ module.exports = {
 			console.log(err);
 		}
 	},
+
 	createEntry: async (req, res) => {
 		console.log(req.body);
 		try {
 			await Entry.create({
 				summary: req.body.summary,
-				date: req.body.date,
+				date: new Date(req.body.date),
 				userId: req.user.id,
 				cause: req.body.cause,
 				action: req.body.action,

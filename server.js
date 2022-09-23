@@ -53,6 +53,7 @@ app.use(flash());
 
 app.use("/", mainRoutes);
 app.use("/entries", entryRoutes);
+app.use("/entries", mainRoutes);
 
 app.listen(process.env.PORT || PORT, () => {
 	console.log(`Server running on port ${PORT}`);
