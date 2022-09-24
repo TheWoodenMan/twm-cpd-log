@@ -23,9 +23,10 @@ img {
   /* ADDITIONAL STYLES
   /*******************************************/
 
-html > header > nav {
+html {
 	font-family: "montserrat", Arial, sans-serif !important;
 	background-color: #e0eaef;
+	font-size: 125%;
 }
 
 #title-image {
@@ -34,32 +35,18 @@ html > header > nav {
 
 header,
 #home,
-nav.navbar {
+div#navbarNav,
+html,
+body {
 	background-color: #e0eaef;
 }
 
-#home > h1,
-#home > p {
+#home > * {
 	color: #03023e;
 }
 
-#about {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-	height: 100vh;
-	width: 100%;
-}
-
-#cpd-background-image {
-	height: 55vh;
-	font-size: xx-large;
-	font-weight: bold;
-}
-#cpd-background-image > h2 {
+.cpd-text {
 	position: relative;
+	font-weight: bold;
 	color: #03023e;
-	z-index: 100;
 }
