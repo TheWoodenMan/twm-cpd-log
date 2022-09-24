@@ -4,7 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CPD Log</title>
+		<title>CPDeasy - Home</title>
+		<link
+		rel="shortcut icon"
+		type="image/x-icon"
+		href="/images/teapot_1fad6_16x16.png"
+	/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -15,12 +20,19 @@
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous"
 		/>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
-	<header class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light center">
-			<a class="navbar-brand" href="#">CPD Log</a>
+
+	<!-- Start of Header-->
+	<header class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light center">
+			
 			<button
-				class="navbar-toggler"
+				class="navbar-toggler  my-1"
 				type="button"
 				data-toggle="collapse"
 				data-target="#navbarNav"
@@ -34,12 +46,15 @@
 					data-bs-target="#navbarNav"
 				></span>
 			</button>
+			
 			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
+				<ul class="d-flex navbar-nav fs-2 fw-bold align-items-center">
 					<li class="nav-item active">
-						<a class="nav-link" href="/"
-							>Home <span class="sr-only">(current)</span></a
-						>
+						<a class="nav-link" href="/">
+							<img class="d-inline-block mr-1 navbar-brand" src="/images/cpdeasy_square.png" alt="">
+							<span>CPDeasy</span>
+							<span class="sr-only">(current)</span>
+						</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="signup"><%= !user ? 'Sign Up' : '' %></a>
@@ -50,7 +65,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="tos">Terms of Service</a>
+						<a class="nav-link" href="tos">ToS</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="privacy">Privacy</a>
@@ -69,49 +84,140 @@
 			</div>
 		</nav>
 	</header>
-	<body>
-		<section>
-			<div class="row container px-4 gy-2 offset-md-1">
-				<h1 class="text-primary">CPD LOG</h1>
-				<p class="col-lg-2">
-					<a
-						href="https://www.managers.org.uk/membership/chartered-manager/"
-						target="_blank"
-						><span data-toggle="tooltip" title="(Chartered Managers Institute)"
-							>CMI</span
-						></a
-					>
-					members are required to make a commitment to their ongoing
-					professional development and learning
-				</p>
-				<p class="col-lg-2">
-					Keeping a
-					<a
-						href="https://www.managers.org.uk/knowledge-and-insights/blog/continuing-professional-development-what-does-cpd-actually-mean/"
-						target="_blank"
-						><span
-							data-toggle="tooltip"
-							title="(Continuing Professional Development)"
-							>CPD Log</span
-						></a
-					>
-					helps a leader to identify and reflect on learning opportunities in
-					their day to day work.
-				</p>
-				<p class="col-lg-2">
-					This CPD app supports managers in that activity, providing a simple,
-					structured method for adding, deleting and reviewing past log entries.
-				</p>
-				<p class="col-lg-2">
-					The act of recalling, reflecting and reasoning through them can cement
-					them in your mind to help your learning and development as a leader.
-				</p>
-				<p class="col-lg-2">
-					CPD reflections typically make great case studies for behavioural
-					recruitment questions and reflecting on them can help you interview
-					better.
-				</p>
+	<!-- End of Header-->
+	<!-- Start of Main Page 1 -->
+	<body class="container-fluid">
+		<section id="home" class="d-flex flex-column flex-lg-row container-fluid mt-5 mb-5 align-items-center text-center">
+			<div class="col-12 col-lg-5">
+				<img 
+				id="title-image" 
+				class="img-fluid rounded-circle p-3 " 
+				src="\images\lady_on_laptop_smiling.avif" 
+				alt="a lady typing on her laptop and smiling, there is a latte coffee in the foreground.">
 			</div>
+			<div class="container d-flex flex-column col-12 col-lg-7 text-center align-items-center">
+				<div class="d-flex flex-column text-center">
+					<h1 class="py-2 fs-1 text-center mb-5">
+						Log your learning the easy way
+					</h1>
+				</div>
+				<div class="container d-flex flex-column text-center fs-5 col-12 col-md-10 justify-content-center align-items-center">
+					<h5 class="text-secondary col-10 offset-1 py-2 fs-5 mb-2">
+						CPDeasy helps you track your leadership learning journey.
+					</h5>
+					<h5 class="text-secondary col-10 offset-1 py-2 fs-5 mb-2">
+						Adding a diary entry is fast and easy.  
+					</h5>
+					<h3 class="text-secondary col-12 offset-1 py-2 fs-5 mb-2">
+						Keep track of your reflections and review records at your convenience with your CPD log.
+					</h3>
+				</div>
+				<div class="btn-group py-2 md-2 mb-5">
+						<div class="px-2 m-1">
+							<a href="#about">
+								<button class="btn btn-secondary">
+									Learn More
+								</button>
+							</a>
+						</div>
+						<div class="px-2 m-1">
+							<a href="signup">
+								<button class="btn btn-danger">
+									Sign Up
+								</button>
+							</a>
+						</div>	
+				</div>
+			</div>
+			
+		</section>
+		<section id="about" class="container-fluid mt-5">
+				<div class="mt-5">
+					<div class="bg-image mt-5" style="max-width: 100%;">
+						<div class="position-relative text-light w-100"
+								style="background-color: rgba(0, 0, 0, 0.5)">
+									<h2 class="p-3 m-0">Learn about CPD</h2>
+								</div>
+								<img src="/images/leaders_meeting.avif" 
+								alt="a trainer showing a presentation to a group of learners seated in a semi-circle nearby, they are happy and engaged."
+								class="w-100 mb-5" />
+								
+					</div>
+				</div>
+				<div class="d-flex container justify-content-center mb-5">
+					<a href="#cpdText">
+						<button class="btn btn-primary btn-block col-12">
+							What are the benefits?
+						</button>
+					</a>
+				</div>
+			</div>
+			<div id="cpdText" class="d-flex flex-column flex-md-wrap flex-md-row fs-6 mt-5 text-center align-items-center justify-content-center">
+				<div class="d-flex col-10 col-md-5 col-lg-3 mt-5 flex-column align-items-center justify-content-start">
+					<i class="fa-solid fa-2xl mb-4 fa-file-pen py-2"></i>
+					<p class="py-2">
+						Keeping a
+						<a
+							href="https://www.managers.org.uk/knowledge-and-insights/blog/continuing-professional-development-what-does-cpd-actually-mean/"
+							target="_blank"
+							><span
+								data-toggle="tooltip"
+								title="(Continuing Professional Development)"
+								>CPD Log</span
+							></a
+						>
+						helps leaders like you to focus, identify and reflect on learning opportunities in
+						your work - guiding your progression.
+					</p>
+				</div>
+				<div class="d-flex m-2 col-10 col-md-5 col-lg-3 flex-column align-items-center justify-content-start">
+					<i class="fa-solid fa-2xl mb-4 fa-lightbulb py-2"></i>
+					<p class="py-2">
+						<a
+							href="https://www.managers.org.uk/membership/chartered-manager/"
+							target="_blank"
+							><span data-toggle="tooltip" title="(Chartered Managers Institute)"
+								>CMI</span
+							></a
+						>
+						members and other professionals are required to make a commitment to their ongoing
+						professional development and learning
+					</p>
+				</div>
+				<div class="d-flex m-2 col-10 col-md-5 col-lg-3 flex-column justify-content-start align-items-center">
+					<i class="fa-solid fa-2xl mb-4 fa-book-open py-2"></i>
+					<p class="py-2">
+						This CPD app supports managers in that activity, providing a simple,
+						structured method for adding, deleting and reviewing past log entries.
+					</p>
+				</div>
+				<div class="d-flex m-2 col-10 col-md-5 col-lg-3 flex-column align-items-center justify-content-start">
+					<i class="fa-solid fa-2xl mb-4 fa-users-gear py-2"></i>
+					<p>
+					Recording your learning experiences cements
+					the learning in your mind, helping your learning and development as a leader.
+					</p>
+				</div>
+				<div class="d-flex m-2 col-10 col-md-5 col-lg-3 flex-column align-items-center justify-content-start">
+					<i class="fa-solid fa-2xl mb-4 fa-handshake-simple py-2"></i>
+					<p class="py-2">
+					CPD reflections typically make great case studies for appraisals and recruitment meetings, helping you perform better.
+					</p>
+				</div>
+				<div class="d-flex m-2 col-10 col-md-5 col-lg-3 flex-column align-items-center justify-content-start">
+					<i class="fa-solid fa-2xl mb-4 fa-chart-line py-2"></i>
+					<p class="py-2">
+					Reflecting regularly helps improve your self-awareness, greatly accelerating your learning and increasing your potential for growth.
+					</p>
+				</div>
+			</div>
+			<a href="signup">
+				<div class="d-flex container justify-content-center">
+					<button  class="btn btn-primary btn-block col-8">
+						Sign Up For a Free Account
+					</button>
+				</div>
+			</a>
 		</section>
 		<br />
 		<script src="js/main.js"></script>

@@ -22,3 +22,31 @@ img {
 /******************************************
   /* ADDITIONAL STYLES
   /*******************************************/
+
+html {
+	font-family: "montserrat", Arial, sans-serif !important;
+	background-color: #e0eaef;
+	font-size: 125%;
+}
+
+#title-image {
+	height: 50vh;
+}
+
+header,
+#home,
+div#navbarNav,
+html,
+body {
+	background-color: #e0eaef;
+}
+
+#home > * {
+	color: #03023e;
+}
+
+.cpd-text {
+	position: relative;
+	font-weight: bold;
+	color: #03023e;
+}
