@@ -43,14 +43,23 @@ nav.navbar {
 	color: #03023e;
 }
 
-#cpd-background-image {
-	background-image: url(/images/leaders_meeting.avif);
-	object-fit: cover;
+#about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	height: 100vh;
 	width: 100%;
-	opacity: 60%;
+}
+
+#cpd-background-image {
 	height: 55vh;
-	color: #03023e;
 	font-size: xx-large;
 	font-weight: bold;
-	text-align: center;
+}
+#cpd-background-image > h2 {
+	position: relative;
+	color: #03023e;
+	z-index: 100;
 }
