@@ -16,7 +16,9 @@ I built this as a simple CRUD app that grabs your data from a form sent to the b
 
 # Mobile Responsive View
 
-![image](https://user-images.githubusercontent.com/85075266/191354434-1059de28-95c1-4913-ae68-f7df6fb84d3c.png)
+![image](https://user-images.githubusercontent.com/85075266/192169634-5d97053e-79fc-4c15-9b8e-e6b946309c67.png)
+
+bootstrap supports a "Mobile-first" view which works from the ground up.  If you build from mobile as a starting point with bootstrap it's generally quite easy to tailor the site with inline css to fit phones/tablets and then move on to desktops.  I actually had the most trouble with high resolution monitors > 1400 where I had to implement media queries manually because bootstrap breakpoints cap off at 1400px.
 
 
 ## Optimizations
