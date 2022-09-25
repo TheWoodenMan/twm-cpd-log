@@ -1,4 +1,4 @@
-# CPD Log for CMI Chartered Managers
+# CPD Log for Leadership Professionals
  
 CPD Log
 I built this app as a management tool to help myself (or other leaders) to track their continuous professional development.  Previous logs I had maintained were fully manual in either gsheets or written in markdown - I wanted something database related, powerful but simple in presentation that I could adapt for quick access and day to day use.
