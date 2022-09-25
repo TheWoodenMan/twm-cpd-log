@@ -4,7 +4,7 @@ CPD Log
 I built this app as a management tool to help myself (or other leaders) to track their continuous professional development.  Previous logs I had maintained were fully manual in either gsheets or written in markdown - I wanted something database related, powerful but simple in presentation that I could adapt for quick access and day to day use.
 
 Link to project: https://cpd-log.onrender.com/
-![image](https://user-images.githubusercontent.com/85075266/191354067-01f86c67-1749-4078-a7f2-b2bf0f57ca90.png)
+![image](https://user-images.githubusercontent.com/85075266/192169575-f0fe9582-903d-445a-8743-ee48446679c7.png)
 
 
 ## How It's Made:
@@ -29,6 +29,8 @@ I started out by having a verbose and unwieldy entry-log format, but after resea
 I added in passport.js for authentication and used bcrypt to salt and hash passwords. 
 
 Having previously only used older versions of mongoose, I wanted to use the latest on this app so I could test-drive a few of the features.  That meant having to update legacy code for compatibility using mongoose documentation to bring it up to date.
+
+![image](https://user-images.githubusercontent.com/85075266/192169591-2371c257-b2ef-4c6a-b183-83033e68bc46.png)
 
 ## Lessons Learned:
 Bootstrap was a really nice lightweight framework to use, but there is a learning curve.  Taking it from "working" to "ok" and "ok" to good was just a question of how much time I wanted to spend going over the documentation.  That's all good and I could probably spend a bit more time making it better - but getting authenticaiton set up was more important. - I will go back and make it look nicer when I get more time. Generally I prioritise functionality over form. Edit: I did exactly that and the overall look and feel of the site is looking much better!
