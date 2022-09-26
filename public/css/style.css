@@ -182,4 +182,9 @@ body {
 		font-size: 40px;
 		font-size: 1.5vw;
 	}
+
+	#benefits-text-container > div > i {
+		font-size: 80px;
+		font-size: 3vw;
+	}
 }
