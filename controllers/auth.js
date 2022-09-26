@@ -14,7 +14,7 @@ exports.getLogin = (req, res) => {
 	});
 };
 
-exports.postLogin = (req, res, next) => {
+exports.postLogin = async (req, res, next) => {
 	const validationErrors = [];
 	if (!validator.isEmail(req.body.email))
 		validationErrors.push({ msg: "Please enter a valid email address." });
@@ -22,7 +22,7 @@ exports.postLogin = (req, res, next) => {
 		validationErrors.push({ msg: "Password cannot be blank." });
 
 	if (validationErrors.length) {
-		req.flash("errors", validationErrors);
+		await req.flash("errors", validationErrors);
 		return res.redirect("/login");
 	}
 	req.body.email = validator.normalizeEmail(req.body.email, {
