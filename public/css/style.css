@@ -19,6 +19,10 @@ img {
 	margin: 0 auto;
 }
 
+#signup-form {
+	margin: 0 0 5rem 0;
+}
+
 /******************************************
   /* ADDITIONAL STYLES
   /*******************************************/
@@ -181,5 +185,10 @@ body {
 	#benefits-text-container > div > p {
 		font-size: 40px;
 		font-size: 1.5vw;
+	}
+
+	#benefits-text-container > div > i {
+		font-size: 80px;
+		font-size: 3vw;
 	}
 }
