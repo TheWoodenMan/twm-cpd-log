@@ -52,7 +52,9 @@ body {
 }
 
 @media (min-width: 1400px) {
-	#home {
+	#home,
+	#about,
+	#benefits {
 		height: 100vh;
 	}
 
@@ -107,16 +109,24 @@ body {
 		height: 100vh;
 	}
 
+	h1.home-title.py-2.fs-1.text-center.mb-5 {
+		font-size: 50px;
+		font-size: 1.5vw;
+		font-weight: bold;
+		padding: 2% 5%;
+	}
+
 	#home-image-container {
-		padding: 0 0 20% 8%;
+		padding: 6% 0 20% 8%;
 	}
 	#home-text-container {
 		padding: 0 0 15% 0;
 	}
 
-	.home-title {
-		font-size: 35px;
-		font-size: 1vw;
+	#home-text-container.home-title {
+		font-size: 50px;
+		font-size: 1.5vw;
+		font-weight: bold;
 	}
 
 	#about-button-container {
@@ -149,14 +159,19 @@ body {
 }
 
 @media (min-width: 1920px) {
-	.home-title {
-		font-size: 35px;
-		font-size: 1vw;
+	#home-text-container.home-title {
+		font-size: 60px;
+		font-size: 4vw;
+		font-weight: bold;
 	}
 
-	.home-text {
+	.home-text > * {
 		font-size: 50px;
-		font-size: 2vw;
+		font-size: 3vw;
+	}
+
+	#benefits {
+		margin: 5% 0 0 0;
 	}
 
 	#benefits-text-container {
