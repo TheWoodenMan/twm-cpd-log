@@ -86,44 +86,44 @@
 	<body>
 		<section>
 			<div class="container row offset-1 col-10">
-				<h2 class="py-1 px-1 text-primary">Submit a Log Entry</h2>
+				<h2 class="py-1 px-1 text-primary mb-3">Submit a Log Entry</h2>
 				<br />
 				<form
 					action="/entries/createEntry"
 					method="POST"
-					class="col-md-12 gy-2 container"
+					class="col-md-12 gy-2 mb-3 container"
 				>
 					<input
-						class="col-md-8 form-control"
+						class="col-md-8 mb-1 form-control"
 						type="text"
 						placeholder="Short title summary"
 						name="summary"
 						required
 					/>
-					<input class="col-4 col-md-3  form-control" type="date" name="date"  required/>
+					<input class="col-4 mb-1 col-md-3  form-control" type="date" name="date"  required/>
 					<input
-						class="col-11 col-md-9 form-control"
+						class="col-11 mb-1 col-md-9 form-control"
 						type="text"
 						placeholder="What happened?"
 						name="cause"
 						required
 					/>
 					<input
-						class="col-11 col-md-9  form-control"
+						class="col-11 mb-1 col-md-9  form-control"
 						type="text"
 						placeholder="What did you do?"
 						name="action"
 						required
 					/>
 					<input
-						class="col-11 col-md-8  form-control"
+						class="col-11 mb-1 col-md-8  form-control"
 						type="text"
 						placeholder="How did it go?"
 						name="result"
 						required
 					/>
 					<input
-						class="col-11 col-md-9 form-control"
+						class="col-11 mb-3 col-md-9 form-control"
 						type="text"
 						placeholder="What did you learn?"
 						name="learned"
@@ -134,7 +134,7 @@
 			</div>
 		</section>
 		<br />
-		<div class="container row offset-1 col-10">
+		<div class="container row offset-1 col-10 mb-3">
 			<h2 class="py-1 px-1 text-primary">Search by Dates</h2>
 			<br />
 			<form
@@ -144,20 +144,20 @@
 			>
 				
 			<label for="startDate">Start Date:</label>
-				<input class="col-3 col-md-3  form-control" type="date" name="startDate" id="startDate" required/>
+				<input class="col-3 col-md-3 mb-1 form-control" type="date" name="startDate" id="startDate" required/>
 			<label for="endDate">End Date:</label>
-				<input class="col-3 col-md-3  form-control" type="date" name="endDate" id="endDate" required/>
+				<input class="col-3 col-md-3 mb-3 form-control" type="date" name="endDate" id="endDate" required/>
 				
 				<input class="btn btn-primary col-11 col-md-9 form-control" type="submit" />
 			</form>
 		</div>
 		<br />
-		<section class="row container px-5 gy-2 offset-md-1">
+		<section class="row container px-5 gy-2 offset-md-1 mb-5">
 			<h2 class="text-primary">Log Entries</h2>
 			<!-- takes the provided entries data and loops over it.-->
 			<div class="accordion" id="accordionEntry">
 				<% for (let i=0; i < entries.length; i++) { %>
-				<div class="accordion-item col-md-11">
+				<div class="accordion-item col-md-11 mb-1">
 					<div class="accordion-header btn-group col-md-12" id="heading<%=i%>">
 						<button
 							class="accordion-button collapsed"
