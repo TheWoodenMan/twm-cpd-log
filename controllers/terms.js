@@ -1,7 +1,7 @@
 module.exports = {
 	getTos: (req, res) => {
 		res.render("tos.ejs", {
-			title: "Tos",
+			title: "ToS",
 			user: req.user,
 		});
 	},
