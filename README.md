@@ -8,7 +8,7 @@ Link to project: https://cpdeasy.azurewebsites.net/
 
 
 ## How It's Made:
-Tech used: HTML, CSS, JavaScript, Bootstrap, EJS, node.js, express, mongoDB, mongoose, 
+Tech used: HTML, CSS, JavaScript, Bootstrap, EJS, node.js, express, mongoDB, mongoose, Azure 
 
 Middleware: passport.js, bcrypt, validator, express-session, body-parser, flash, morgan, 
 
@@ -42,6 +42,10 @@ I deep dived quite a bit on express-session for this one.  After installing a lo
 I learned that versioning can be really important as successive versions can add/remove features and functionalities, sometimes completely changing their syntax in the process. Removing the redundant syntax fixed the problem. Finally, I found a way to implement the conditional appearance of buttons depending on state by getting advice from another developer, each route now passes the user state back to the view, so if the user is logged in - they'll see a slightly different version of the site.
 
 Bootstrap is highly versatile, which is perhaps unsurprising given it's age and widespread use. I was able to make the app fully mobile responsive with dynamic forms, buttons and navigation systems without touching front-end javascript or css.
+
+I originally hosted the project on render and AWS but this was not an optimal configuration.  Render is free to host on but pauses your hosting environment.  On hearing a request it spools up the container but this can take upwards of a minute(!) to gain access, meanwhile our user is left looking at an empty screen.
+
+I migrated the hosting for the app to Azure Web Apps which gave me a huge performance boost, now the app is available in seconds.  I also re-hosted the mongodb storage on Azure Resources further improving the customisability and performance of the combined resources of the app.  The whole application is now available to be managed within Azure Portal and diagnostic analysis and insight is available via Azure Monitor.
 
 ## Examples:
 Take a look at these other examples that I have in my own portfolio:
