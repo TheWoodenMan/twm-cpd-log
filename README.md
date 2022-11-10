@@ -6,11 +6,17 @@ I built this app as a management tool to help myself (or other leaders) to track
 Link to project: https://cpdeasy.azurewebsites.net/
 ![image](https://user-images.githubusercontent.com/85075266/192169575-f0fe9582-903d-445a-8743-ee48446679c7.png)
 
+# How It's Made:
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
-## How It's Made:
-Tech used: HTML, CSS, JavaScript, Bootstrap, EJS, node.js, express, mongoDB, mongoose, Azure 
-
-Middleware: passport.js, bcrypt, validator, express-session, body-parser, flash, morgan, 
+Middleware: EJS, Mongoose, passport.js, bcrypt, validator, express-session, body-parser, flash, morgan, 
 
 I built this as a simple CRUD app that grabs your data from a form sent to the back-end then uploads it to mongodb.  I used a combination of EJS and Bootstrap for the front-end which worked extremely well, bootstrap is lightweight and totally compatible, it was possible to make a simple, clean UI quickly and effectively.  
 
