@@ -4,11 +4,11 @@ module.exports = {
 	getEntries: async (req, res) => {
 		try {
 			const entryItems = await Entry.find({ userId: req.user.id }).sort({
-				"date": -1,
+				"date": -1
 			});
 			res.render("entries.ejs", {
 				entries: entryItems,
-				user: req.user,
+				user: req.user
 			});
 		} catch (err) {
 			console.log(err);
@@ -22,24 +22,14 @@ module.exports = {
 				userId: req.user.id,
 				date: {
 					$gte: new Date(req.body.startDate),
-					$lt: new Date(req.body.endDate),
-				},
+					$lt: new Date(req.body.endDate)
+				}
 			}).sort({
-				"date": -1,
+				"date": -1
 			});
-			// const itemsLeft = await Entry.countDocuments({
-			// 	userId: req.user.id,
-			// 	completed: false,
-			// });
-			// const last5 = entryItems
-			// 	.sort((a, b) => b.createdAt - a.createdAt)
-			// 	.filter((x, i) => i <= 4);
-			// console.log({ last5 });
 			res.render("entries.ejs", {
-				// last5: last5,
 				entries: entryItems,
-				// left: itemsLeft,
-				user: req.user,
+				user: req.user
 			});
 		} catch (err) {
 			console.log(err);
@@ -56,7 +46,7 @@ module.exports = {
 				cause: req.body.cause,
 				action: req.body.action,
 				result: req.body.result,
-				learned: req.body.learned,
+				learned: req.body.learned
 			});
 			console.log(`Entry ${req.body.summary} has been added!`);
 			res.redirect("/entries");
@@ -75,5 +65,5 @@ module.exports = {
 		} catch (err) {
 			res.redirect("/entries");
 		}
-	},
+	}
 };
