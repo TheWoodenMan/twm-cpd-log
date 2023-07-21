@@ -4,7 +4,7 @@
   "description": "a simple CRUD app to help with cpd logging",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
