@@ -22,7 +22,8 @@ module.exports = function (passport) {
         } catch (e) {
           return done(e)
         }
-        user.comparePassword(password, (err, isMatch) => {
+
+        const compareCallback = (err, isMatch) => {
           if (err) {
             // there is an error, no match etc return the result
             return done(err)
@@ -32,16 +33,26 @@ module.exports = function (passport) {
             return done(null, user)
           }
           return done(null, false, { msg: 'Invalid email or password.' })
-        })
+        }
+
+        user.comparePassword(password, compareCallback)
       }
     )
   )
 
-  passport.serializeUser((user, done) => {
-    done(null, user.id)
+  passport.serializeUser(async (user, done) => {
+    try {
+      done(null, user.id)
+    } catch (e) {
+      return done(e)
+    }
   })
 
-  passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => done(err, user))
+  passport.deserializeUser(async (id, done) => {
+    try {
+      User.findById(id, (err, user) => done(err, user))
+    } catch (e) {
+      return done(e)
+    }
   })
 }
